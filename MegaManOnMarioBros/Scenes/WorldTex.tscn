@@ -1,0 +1,320 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Img/marioWorldTextures.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Clignotte"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 21 ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="sol" type="Sprite" parent="."]
+position = Vector2( 32, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="sol"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sol/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Boite" type="Sprite" parent="."]
+position = Vector2( 80, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boite/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Boite"]
+anims/Clignotte = SubResource( 2 )
+
+[node name="Boite2" type="Sprite" parent="."]
+position = Vector2( 80, 208 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 21
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boite2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boite2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Brique" type="Sprite" parent="."]
+position = Vector2( 128, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Brique"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brique/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Haie1" type="Sprite" parent="."]
+position = Vector2( 176, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Haie2" type="Sprite" parent="."]
+position = Vector2( 224, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Haie3" type="Sprite" parent="."]
+position = Vector2( 32, 64 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 5
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Buisson1" type="Sprite" parent="."]
+position = Vector2( 80, 64 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 6
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Buisson2" type="Sprite" parent="."]
+position = Vector2( 128, 64 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 7
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Buisson3" type="Sprite" parent="."]
+position = Vector2( 176, 64 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 8
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Buisson4" type="Sprite" parent="."]
+position = Vector2( 224, 64 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 9
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Buisson5" type="Sprite" parent="."]
+position = Vector2( 32, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 10
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Buisson6" type="Sprite" parent="."]
+position = Vector2( 80, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 11
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tuyaux1" type="Sprite" parent="."]
+position = Vector2( 128, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 12
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tuyaux1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tuyaux1/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tuyaux2" type="Sprite" parent="."]
+position = Vector2( 176, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 13
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tuyaux2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tuyaux2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tuyaux3" type="Sprite" parent="."]
+position = Vector2( 224, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 15
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tuyaux3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tuyaux3/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tuyaux4" type="Sprite" parent="."]
+position = Vector2( 32, 160 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 14
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tuyaux4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tuyaux4/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Ciel" type="Sprite" parent="."]
+position = Vector2( 80, 160 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 16
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Nuage1" type="Sprite" parent="."]
+position = Vector2( 128, 160 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 17
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Nuage2" type="Sprite" parent="."]
+position = Vector2( 176, 160 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 18
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Nuage3" type="Sprite" parent="."]
+position = Vector2( 224, 160 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 19
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Nuage4" type="Sprite" parent="."]
+position = Vector2( 32, 208 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 20
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Nuage5" type="Sprite" parent="."]
+position = Vector2( 32, 208 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 20
+__meta__ = {
+"_edit_group_": true
+}
