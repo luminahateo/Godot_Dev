@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://0onavt2hf3t8"]
+
+[ext_resource type="PackedScene" uid="uid://b6gq2oi4c432j" path="res://Scenes/static_body_2d_plateforme.tscn" id="1_0owni"]
+[ext_resource type="PackedScene" uid="uid://cbrrxavea5asm" path="res://Scenes/rigid_body_2d_balle.tscn" id="2_ue5tn"]
+
+[node name="Node2D Jeu" type="Node2D"]
+
+[node name="StaticBody2D plateforme" parent="." instance=ExtResource("1_0owni")]
+position = Vector2(412, 601)
+
+[node name="RigidBody2D Balle" parent="." instance=ExtResource("2_ue5tn")]
+position = Vector2(367, 101)

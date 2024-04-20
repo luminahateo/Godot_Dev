@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbrrxavea5asm"]
+
+[ext_resource type="Texture2D" uid="uid://klwhkjhk8qnh" path="res://Assets/soccerball.png" id="1_8nur2"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1mpfq"]
+bounce = 0.9
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vw65t"]
+radius = 42.0119
+
+[node name="RigidBody2D Balle" type="RigidBody2D"]
+position = Vector2(487, 70)
+physics_material_override = SubResource("PhysicsMaterial_1mpfq")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8nur2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vw65t")
